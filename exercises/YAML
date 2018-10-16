@@ -1,0 +1,30 @@
+--- 
+#Q1
+hostname: R1
+loopback: "10.0.0.1"
+maxint: 10
+
+--- 
+#Q2
+hostname: R1
+loopback: "10.0.0.1"
+interfaces: 
+  - ge-0/0/0
+  - ge-0/0/1
+  - ge-0/1/1
+  
+--- 
+#Q3
+- username: bob
+  password: jane
+- username: chris
+  password: pass
+  
+--- 
+#Q4
+- username: bob
+  password: jane
+- username: chris
+  password: pass
+  privilege: 15
+  autocommand: show run
