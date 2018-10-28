@@ -16,9 +16,11 @@ Hosts and Versions used in lab
 ok: [172.16.1.41] => {
     "msg": "SRX1  15.1X49-D140.2"
 }
+
 ok: [172.16.1.42] => {
     "msg": "SRX2  15.1X49-D140.2"
 }
+
 ok: [172.16.1.43] => {
     "msg": "SRX3  18.1R2.5"
 }
