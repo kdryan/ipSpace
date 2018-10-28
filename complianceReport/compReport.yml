@@ -1,0 +1,17 @@
+---
+- name: Check Junos Version
+  hosts: srx_devices
+  connection: local
+  gather_facts: no
+  roles:
+  - Juniper.junos 
+
+  tasks:
+  - name: Retrieve Junos OS Facts
+    juniper_junos_facts: 
+    register: junos 
+  - name: Add non-compliant version to file
+    lineinfile:
+      path: junosVer.yml
+      line: "  {{ junos.facts.hostname }}: {{junos.facts.version}}"
+    when: "not ('18.1R2.5' in junos.facts.version)"

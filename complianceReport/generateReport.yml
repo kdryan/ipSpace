@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  gather_facts: no
+  connection: local
+  vars_files: 
+  - "junosVer.yml"
+  tasks:
+  - local_action: file path=junosReport.html state=absent
+  - local_action: file path=junosReport.html state=touch
+  - template: src=junosVerTemplate.j2 dest=junosReport.html

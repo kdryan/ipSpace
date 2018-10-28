@@ -1,0 +1,21 @@
+<html>
+<head>
+ <title>Test Report</title>
+ <style>
+ body {background-color: lightblue;}
+ h1 {text-align: center;}
+ </style>
+</head>
+<body>
+ <h1>Incorrect Junos Version List</h1>
+ <h3>Recommended Version: 18.1R2.5</h3>
+ <table border="1" width="60%">
+  <col style="width:20%">
+  <col style="width:20%">
+  <tr><th>Device</th><th>Version</th></tr>
+{% for host,ver in versions|dictsort %}
+  <tr><td>{{host}}</td>
+   <td>{{ver}}</td></tr>
+{% endfor%}
+ </table>
+</body>
