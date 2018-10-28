@@ -1,3 +1,4 @@
+'''
 ---
 - name: Check Junos Version
   hosts: srx_devices
@@ -15,3 +16,4 @@
       path: junosVer.yml
       line: "  {{ junos.facts.hostname }}: {{junos.facts.version}}"
     when: "not ('18.1R2.5' in junos.facts.version)"
+'''
