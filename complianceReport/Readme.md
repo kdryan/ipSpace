@@ -8,6 +8,7 @@ Generate Report
 generateReport.yml - takes junosVerTemplate.j2 and junosVer.yml and creates a html file junosReport.html to display non compliant hosts and junos version being used.
 
 To view results 
+Open Report Display.PNG or
 Open junosReport.html in browser
 
 
